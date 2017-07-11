@@ -1,0 +1,270 @@
+html, body {
+	background: #ffffff;
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	width: 1000px;
+	max-width: 1000px;
+	padding: 0;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+
+.wrapper .item {
+	width: 296px;
+	height: auto;
+	list-style: none;
+	display: inline-block;
+	vertical-align: top;
+	color: #4a4a4a;
+	margin: 15px;
+	padding: 10px 10px 20px;
+	box-sizing: border-box;
+	position: relative;
+	border-radius: 2px;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(159,157,157,0.7);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(159,157,157,0.7);
+	box-shadow: 0px 0px 5px 0px rgba(159,157,157,0.7);
+}
+
+.wrapper .masonryColumn { 
+	float: left;
+	width: 33%;
+}
+
+.wrapper .insta-image img, .wrapper .insta-image video {
+	width: 296px;
+	height: auto;
+	margin: 10px 0 10px -10px;
+}
+
+.wrapper .insta-avatar img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+.wrapper .insta-avatar, .wrapper .insta-top-right {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.wrapper .insta-top-right {
+	width: 110px;
+}
+
+.wrapper .insta-avatar {
+	margin: 0 10px;
+}
+
+.wrapper .insta-username {
+	font-weight: bold;
+}
+
+.wrapper .item a {
+	text-decoration: none;
+	color: #4a4a4a;
+}
+
+.wrapper .insta-location {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.wrapper .insta-postdate {
+	float: right;
+	margin: 10px 0 0;
+	text-align: right;
+}
+
+.wrapper .insta-postdate a {
+	text-decoration: none;
+	color: #969696;
+}
+
+.wrapper .insta-heart {
+	width: 14px;
+	height: 12px;
+	background: url('http://ef-englishfirst.ru/i/ozon_heart.png') no-repeat center left;
+	background-position: 0 0;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0 6px 0 0;
+}
+
+.wrapper .insta-likes {
+	display: inline-block;
+}
+
+.wrapper .insta-text {
+	margin: 10px 0 0;
+}
+
+/*****SLIDER*****/
+
+.sliders{
+    position: relative;
+    width: 100%;
+    height: 296px;
+	margin: 0 0 20px;
+	padding: 0;
+	z-index: 200;
+}
+
+.slider{
+    width: 100% ;
+    height: 100%; 
+	list-style: none ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all .6s;
+	z-index: 200;
+}
+
+.showing{
+	opacity: 1;
+}
+
+.slider img {
+	width: 100%;
+	height: 100%;
+}
+
+.toolbar{
+    width: 93%;
+	position: absolute;
+	top: 50%;
+	margin-top: -40px;
+	z-index: 201;
+}
+
+.toolbar > div{
+    cursor: pointer ;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.toolbar div#j-backward, .toolbar div#j-forward {
+	width: 16px;
+	height: 30px;
+	background: url("http://gbrv.ru/images/slider-arrows.png") no-repeat;
+}
+
+.toolbar div#j-backward {
+	float: left;
+	background-position: 0 0;
+}
+
+.toolbar div#j-forward {
+	float: right;
+	background-position: -16px 0;
+}
+
+/********************
+RESPONSIVE
+********************/
+
+@media(max-width: 1000px) {
+	
+	.wrapper {
+		width: 100%;
+	}
+	
+	.wrapper .masonryColumn {
+		float: none;
+		width: 100%;
+	}
+	
+	.wrapper .item {
+		width: 650px;
+		height: 322px;
+		display: block;
+		margin: 30px auto;
+		padding-right: 20px;
+	}
+	
+	.wrapper .insta-image, .wrapper .insta-image img, .wrapper .insta-image video {
+		width: 322px;
+		height: 322px;
+		position: absolute;
+		margin: 0 25px 0 0;
+		top: 0;
+		left: 0;
+	}
+	
+	.wrapper .insta-top {
+		width: 284px;
+		float: right;
+		padding: 0 0 20px;
+		border-bottom: 1px solid #f2f2f2;
+		position: relative;
+		z-index: 101;
+	}
+	
+	.wrapper .insta-avatar {
+		margin: 0 10px 0 0;
+	}
+	
+	.wrapper .insta-bottom {
+		width: 284px;
+		position: absolute;
+		right: 20px;
+		padding: 80px 0 20px 20px;
+		z-index: 100;
+	}
+	
+	.toolbar {
+		width: 98%;
+		margin-top: -10px;
+	}
+	
+}
+
+@media(max-width: 680px) {
+	
+	.wrapper .item {
+		width: 322px;
+		height: 500px;
+		display: block;
+		margin: 30px auto;
+		padding-right: 20px;
+	}
+	
+	.wrapper .insta-top {
+		width: 302px;
+		float: none;
+		border-bottom: none;
+		position: absolute;
+		top: 20px;
+	}
+	
+	.wrapper .insta-image {
+		width: 322px;
+		height: 322px;
+		position: absolute;
+		margin: 0 25px 0 0;
+		top: 80px;
+		left: 0;
+	}
+	
+	.wrapper .insta-bottom {
+		width: 302px;
+		top: 422px;
+		left: 10px;
+		right: 0;
+		padding: 0;
+	}
+	
+	.wrapper .insta-text {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	
+}
