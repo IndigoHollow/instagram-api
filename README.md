@@ -1,6 +1,3 @@
-# ozon
-Тестовое задание от OZON
+# Show 20 last Instagram posts using API
 
 При помощи API Instagram вывести на страницу последние 20 постов пользователя. Посты должны быть расположены плиткой, как в Pinterest. При клике на иконку сердечка должен появляться алерт с id текущего поста.
-
-DEMO: https://jsfiddle.net/zs0eygfd/
